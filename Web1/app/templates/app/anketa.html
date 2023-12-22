@@ -1,0 +1,54 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+{% if form != None %}
+<br>
+<h2>Ваша анкета на работу ночным охраником в пеццерию Фреди</h2>
+<br>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+        {{ form.name }}<br><br>
+        <label for="{{ form.city.id_for_label }}">{{ form.city.label }}:</label>
+        {{ form.city }}<br>
+        <label for="{{ form.gender.id_for_label }}">{{ form.gender.label }}:</label>
+        {{ form.gender }}
+        <label for="{{ form.job.id_for_label }}">{{ form.job.label }}:</label>
+        {{ form.job }}<br><br>
+        <label for="{{ form.internet.id_for_label }}">{{ form.internet.label }}:</label>
+        {{ form.internet }}<br><br>
+        <label for="{{ form.notice.id_for_label }}">{{ form.notice.label }}:</label>
+        {{ form.notice }}<br><br>
+        <label for="{{ form.email.id_for_label }}">{{ form.email.label }}:</label>
+        {{ form.email }}<br><br>
+        <label for="{{ form.message.id_for_label }}">{{ form.message.label }}:</label>
+        {{ form.message }}<br><br>
+        <input type="submit" value="Создать" id="button_finish_form">
+    </form>
+</div>
+{% else %}
+<br>
+<h2>Благодарим вас за резюме, мы свяжемся с вами в скором времени </h2>
+<h3>Ваша анкета:</h3>
+<ul>
+    <li><span>Имя:</span>{{ data.name }}</li>
+    <li><span>Возраст:</span>{{ data.city }}</li>
+    <li><span>Пол:</span>{{ data.gender }}</li>
+    <li><span>Согласен ли получать 120$ в неделю за полные ночные смены:</span>{{ data.job }}</li>
+    <li><span>Бывали ли вы в пициирие до этого:</span>{{ data.internet }}</li>
+    <li><span>Любите ли вы мишку Фреди:</span>{{ data.notice }}</li>
+    <li><span>Ваш номер телефон дя связи:</span>{{ data.email }}</li>
+    <li><span>Информация о вас:</span>{{ data.message }}</li>
+</ul>
+{% endif %}
+<script>
+    $('#button_finish_form').mouseover(() => {
+        $('#button_finish_form').css('background-color', 'purple');
+        $('#button_finish_form').css('color', 'black');
+    });
+    $('#button_finish_form').mouseout(() => {
+        $('#button_finish_form').css('background-color', 'purple');
+        $('#button_finish_form').css('color', 'white');
+    });
+</script>
+{% endblock %}

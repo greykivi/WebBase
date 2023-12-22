@@ -1,0 +1,67 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Серия игр FNAF</title>
+    <style>
+        body {
+            background-color: lavender;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: auto;
+            border: 2px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Серия игр "Five Nights at Freddy's"</h1>
+    <img src="https://sun9-37.userapi.com/impf/c623900/v623900308/b6a18/X_wbPFJit2U.jpg?size=1024x579&quality=96&sign=16ce1ff04bade9819ee985485ef28baf&c_uniq_tag=6Ebbioe164QopHP1EEE4-_UL41-3no2qS6WuTDpwwSQ&type=album" width="100" height="50">
+    <h2>Описание</h2>
+    <a href="https://five-nights-at-freddys.fandom.com">Офицальный цвет Фнаф</a>
+    <p>"Five Nights at Freddy's" (сокращенно FNAF) - серия indie-игр в жанре survival horror, созданных Скоттом Коутоном. Игры из серии FNAF приобрели популярность благодаря уникальной атмосфере, стратегической геймплейной механике и загадочному сюжету.</p>
+    <h2>Игры в серии</h2>
+    <ul>
+        <li>Five Nights at Freddy's (2014)</li>
+        <li>Five Nights at Freddy's 2 (2014)</li>
+        <li>Five Nights at Freddy's 3 (2015)</li>
+        <li>Five Nights at Freddy's 4 (2015)</li>
+        <li>Freddy Fazbear's Pizzeria Simulator (2017)</li>
+        <li>и другие</li>
+    </ul>
+    <h2>Сюжет</h2>
+    <p><b>Сюжет игр FNAF вращается вокруг темной истории Freddy Fazbear's Pizza, а также загадочных событий, связанных с аттракционами и аниматрониками, ожившими ночью.</b></p>
+    <h2>Интересные факты</h2>
+    <p>Благодаря своей загадочной истории, игры FNAF стали объектом интереса для многих исследователей, создавая обширное сообщество поклонников и теоретиков, а также вдохновившие создание ряда литературных и искусственных произведений.</p>
+    <h2>Итоги</h2>
+    <p>Серия игр FNAF продолжает привлекать внимание игроков по всему миру и оставаться одной из наиболее известных независимых игровых франшиз в жанре хоррора.</p>
+    <h2>Регистрация на нового клиента Фреди Фазбер</h2>
+
+    <form>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+
+</body>
+</html>
+
+{% endblock %}

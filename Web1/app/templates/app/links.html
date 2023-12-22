@@ -1,0 +1,26 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+
+{% load static %}
+
+<section>
+    <h3>Официальные сайты</h3>
+    <ul>
+        <li><a href="https://fnafmerch.store/">Offical web-site</a> - Официальная веб сайт ФНАФ.</li>
+        <li><a href="https://five-nights-at-freddys.fandom.com/ru/f">Энциклопедия FNaF</a> - Офицальный сайт фандома сообщества.</li>
+    </ul>
+</section>
+<section>
+    <h3>Игры Пять ночей с Фреди</h3>
+    <ul>
+        <li><a href="https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/">FNAF 1 в Steam</a> - Первая игра серии.</li>
+        <li><a href="https://store.steampowered.com/app/332800/Five_Nights_at_Freddys_2/">FNAF 2 в Steam</a> - Вторая игра серии.</li>
+        <li><a href="https://store.steampowered.com/app/354140/Five_Nights_at_Freddys_3/">FNAF 3 в Steam</a> - Третья игра серии.</li>
+        <li><a href="https://store.steampowered.com/app/388090/Five_Nights_at_Freddys_4/">FNAF 4 в Steam</a> - Четвёртая игра серии.</li>
+    </ul>
+</section>
+
+{% endblock %}
